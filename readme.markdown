@@ -2,6 +2,10 @@ Notifier.js
 =====
 Javascript library for Gnome / Growl type non-blocking notifications. Jquery required.
 
+Download
+=====
+[Release 1](https://github.com/Srirangan/notifer.js/raw/master/releases/1/notifier.js.zip)
+
 Usage Guide
 =====
 
