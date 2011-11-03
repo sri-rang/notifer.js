@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Notifier.js Examples</title>
+  <link rel="stylesheet" type="text/css" href="notifier.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="notifier.js"></script>
+</head>
+<body>
+
+  <h1>Notifier.js Examples</h1>
+  
+  <ul>
+    <li><a onclick="Notifier.success('User registration successful')">Success</a></li>
+    <li><a onclick="Notifier.success('It\'s a boy!', 'Congrats!')">Success with title</a></li>
+    <li><a onclick="Notifier.info('You have been informed!')">Info</a></li>
+    <li><a onclick="Notifier.info('Tomorrow is another day', 'Words of wisdom')">Info with title</a></li>
+    <li><a onclick="Notifier.warning('I warn you Ceasar!')">Warning</a></li>
+    <li><a onclick="Notifier.warning('I warn you Ceasar!', 'Assassination Warning')">Warning with title</a></li>
+    <li><a onclick="Notifier.error('Something may be wrong..')">Error</a></li>
+    <li><a onclick="Notifier.error('Something may be wrong..', 'Ummm..')">Error with title</a></li>
+    <li><a onclick="Notifier.notify('Babe I\'m gonna leave you', 'Led Zeppelin', './icons/Music.png', 2000)">Custom</a></li>
+  </ul>
+
+</body>
+</html>

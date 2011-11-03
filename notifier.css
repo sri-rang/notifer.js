@@ -1,0 +1,45 @@
+#notificationsContainer {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+}
+
+.notification {
+  padding: 12px 18px;
+  margin: 0 0 6px 0;
+  background-color: #000;
+  opacity: 0.80;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity = 80);
+  color: #fff;
+  font: normal 13px "Droid Sans", sans-serif;
+  border-radius: 3px;
+  box-shadow: #999 0 0 12px;
+  width: 300px;
+}
+
+.notification:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity = 100);
+  box-shadow: #000 0 0 12px;
+}
+
+.notification .icon {
+  width: 36px;
+  height: 36px;
+}
+
+.notification .icon, .notification .text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.notification .text {
+  padding: 0 12px;
+}
+
+.notification .text .title {
+  font-weight: bold;
+}
