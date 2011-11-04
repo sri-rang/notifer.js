@@ -4,7 +4,7 @@ Javascript library for Gnome / Growl type non-blocking notifications. Jquery req
 
 Download
 =====
-[Release 1](https://github.com/Srirangan/notifer.js/raw/master/releases/1/notifier.js.zip)
+[Release 1](https://github.com/downloads/Srirangan/notifer.js/notifier.js.zip)
 
 Usage Guide
 =====
@@ -18,12 +18,24 @@ Include Jquery and Notifier.js
 Trigger Notifications
 -----
 
+    // Success notifs
     Notifier.success('User registration successful')
     Notifier.success('It\'s a boy!', 'Congrats!')
+
+    // Info notifs
     Notifier.info('You have been informed!')
     Notifier.info('Tomorrow is another day', 'Words of wisdom')
+
+    // Warning notifs
     Notifier.warning('I warn you Ceasar!')
     Notifier.warning('I warn you Ceasar!', 'Assassination Warning')
+
+    // Error notifs
     Notifier.error('Something may be wrong..')
     Notifier.error('Something may be wrong..', 'Ummm..')
+
+    // Notif with custom icon and timeout
     Notifier.notify('Babe I\'m gonna leave you', 'Led Zeppelin', './icons/Music.png', 2000)
+
+    // HTMLs are escaped, XSS attempts are blunted
+    Notifier.error('<script>alert(\'xss attempt blunted\')</script>')
