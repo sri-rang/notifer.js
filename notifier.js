@@ -16,7 +16,11 @@ Notifier.notify = function(message, title, iconUrl, timeOut) {
   notificationHtml += "</div>";
   notificationHtml += "</div>";
   $("#notificationsContainer").prepend(notificationHtml);
-  setTimeout("$('#" + id + "').fadeOut()", timeOut);
+  (function (id) {
+    setTimeout(function () {
+      $('#'+id).fadeOut();
+    }, timeOut);
+  })(id);
 };
 
 Notifier.info = function(message, title) {Notifier.notify(message, title, "./icons/Info.png", 5000);};
