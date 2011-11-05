@@ -1,8 +1,7 @@
 <html>
 <head>
   <title>Notifier.js Examples</title>
-  <link rel="stylesheet" type="text/css" href="notifier.css"/>
-  <style>
+  <style type="text/css">
     body {
       padding: 2% 5%;
       font: 16px "Droid Sans", sans-serif;
@@ -49,8 +48,7 @@
     <li><a onclick="Notifier.warning('I warn you Ceasar!', 'Assassination Warning')">Warning with title</a></li>
     <li><a onclick="Notifier.error('Something may be wrong..')">Error</a></li>
     <li><a onclick="Notifier.error('Something may be wrong..', 'Ummm..')">Error with title</a></li>
-    <li><a onclick="Notifier.notify('Babe I\'m gonna leave you', 'Led Zeppelin', './icons/Music.png', 2000)">Custom</a>
-    </li>
+    <li><a onclick="Notifier.notify('Babe I\'m gonna leave you', 'Led Zeppelin', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/LedZeppelinmontage.jpg/36px-LedZeppelinmontage.jpg', 2000)">Custom</a></li>
     <li><a onclick="Notifier.error('<script>alert(\'xss attempt blunted\')</script>')">XSS attempts blunted</a></li>
   </ul>
 </div>

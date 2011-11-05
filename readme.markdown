@@ -10,7 +10,9 @@ Links
 Usage Guide
 =====
 
-The master branch is usually unstable. Use the downloadable archive for production. Hack away, experiment on the master branch.
+The master branch may be unstable from time to time. Use the downloadable archive for production.
+
+Hack away, experiment on the master branch. Feel free to clone, fork and send pull requests.
 
 Include Jquery and Notifier.js
 -----
@@ -42,3 +44,15 @@ Trigger Notifications
 
     // HTMLs are escaped, XSS attempts are blunted
     Notifier.error('<script>alert(\'xss attempt blunted\')</script>')
+
+Configure
+-----
+
+  Default behavior of NotifierJS can be modified without having to muddle through the code.
+
+  Here's an example of reducing the default timeout and changing the position of the notifications:
+
+    <script>
+      NotifierjsConfig.defaultTimeOut = 250;
+      NotifierjsConfig.position = ["bottom", "right"];
+    </script>
