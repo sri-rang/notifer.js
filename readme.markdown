@@ -2,8 +2,6 @@ Notifier.js
 =====
 Javascript library for Gnome / Growl type non-blocking notifications. Jquery required.
 
-*The master branch is usually unstable. Use the downloadable archive for production. Hack away, experiment on the master branch. *
-
 Links
 =====
 * [Demo](http://opensource.srirangan.net/notifier.js/)
@@ -11,6 +9,8 @@ Links
 
 Usage Guide
 =====
+
+The master branch is usually unstable. Use the downloadable archive for production. Hack away, experiment on the master branch.
 
 Include Jquery and Notifier.js
 -----
