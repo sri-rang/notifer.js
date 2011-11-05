@@ -1,29 +1,51 @@
+var notifications = $("<div id='notifications'></div>");
 $(document).ready(function() {
-  $("body").append("<div id='notificationsContainer'></div>");
+  $("body").append(notifications);
 });
 
-function escapeHtml(string) { return string.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
-
 var Notifier = {};
-
+var def = function (obj) {
+  return !(typeof obj === "undefined" || obj === null);
+};
 Notifier.notify = function(message, title, iconUrl, timeOut) {
-  var id = "notif-" + new Date().getTime(), notificationHtml = "";
-  notificationHtml += "<div id='" + id + "' class='notification' onclick='$(this).fadeOut()'>";
-  if (iconUrl) notificationHtml += "<img class='icon' src='" + escapeHtml(iconUrl) + "'/>";
-  notificationHtml += "<div class='text'>";
-  if (title) notificationHtml += "<div class='title'>" + escapeHtml(title) + "</div>";
-  if (message) notificationHtml += "<div class='message'>" + escapeHtml(message) + "</div>";
-  notificationHtml += "</div>";
-  notificationHtml += "</div>";
-  $("#notificationsContainer").prepend(notificationHtml);
-  (function (id) {
-    setTimeout(function () {
-      $('#'+id).fadeOut();
-    }, timeOut);
-  })(id);
+  var notification = $("<div></div>");
+  notification.attr({
+    id: ""notify-" + new Date().getTime()",
+    class: "notification"
+  });
+  
+  if (def(iconUrl)) {
+    var icon = $("<img>");
+    icon.attr({
+      "id": "notify-icon",
+      "src": iconUrl
+    });
+    notification.append(icon);
+  }
+  var text = $("<div class='notify-text'>");
+  notification.append(text);
+  
+  if (def(title)) {
+    var titleelm = $("<div class='notify-title'>");
+    titleelm.append(title);
+  }
+  
+  if (def(message)) {
+    var messageelm = $("<div class='message'>");
+    messageelm.append(message);
+  }
+  
+  notifications.prepend(notification);
+  if (undef(timeOut)) {
+    timeOut = 5000;
+  }
+  
+  setTimeout(function () {
+    notification.fadeOut();
+  }, timeOut);
 };
 
-Notifier.info = function(message, title) {Notifier.notify(message, title, "./icons/Info.png", 5000);};
-Notifier.warning = function(message, title) {Notifier.notify(message, title, "./icons/Alert.png", 5000);};
-Notifier.error = function(message, title) {Notifier.notify(message, title, "./icons/Close.png", 5000);};
-Notifier.success = function(message, title) {Notifier.notify(message, title, "./icons/Check.png", 5000);};
+Notifier.info = function(message, title) {Notifier.notify(message, title, "./icons/Info.png");};
+Notifier.warning = function(message, title) {Notifier.notify(message, title, "./icons/Alert.png");};
+Notifier.error = function(message, title) {Notifier.notify(message, title, "./icons/Close.png");};
+Notifier.success = function(message, title) {Notifier.notify(message, title, "./icons/Check.png");};
