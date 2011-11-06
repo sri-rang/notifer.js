@@ -1,10 +1,11 @@
 Notifier.js
 =====
-Javascript library for Gnome / Growl type non-blocking notifications. Jquery required.
+JavaScript library for Gnome / Growl type non-blocking notifications. jQuery required.
 
 Links
 =====
 * [Demo](http://opensource.srirangan.net/notifier.js/)
+* [GitHub](https://github.com/Srirangan/notifer.js)
 * [Download](https://github.com/downloads/Srirangan/notifer.js/notifier.js.zip)
 
 Usage Guide
@@ -13,12 +14,6 @@ Usage Guide
 The master branch may be unstable from time to time. Use the downloadable archive for production.
 
 Hack away, experiment on the master branch. Feel free to clone, fork and send pull requests.
-
-Include Jquery and Notifier.js
------
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script type="text/javascript" src="notifier.js"></script>
 
 Trigger Notifications
 -----
@@ -50,9 +45,8 @@ Configure
 
   Default behavior of NotifierJS can be modified without having to muddle through the code.
 
-  Here's an example of reducing the default timeout and changing the position of the notifications:
+  Here's an example of reducing the default timeout:
 
     <script>
-      NotifierjsConfig.defaultTimeOut = 250;
-      NotifierjsConfig.position = ["bottom", "right"];
+      Notifier.config.defaultTimeout = 250;
     </script>
