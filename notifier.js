@@ -22,7 +22,7 @@
   };
 
   $(document).ready(function() {
-    config.container.css("position", "absolute");
+    config.container.css("position", "fixed");
     config.container.css("z-index", 9999);
     config.container.css(config.position[0], "12px");
     config.container.css(config.position[1], "12px");
