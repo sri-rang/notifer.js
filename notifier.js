@@ -21,16 +21,16 @@
     container: $("<div></div>")
   };
 
-  $(document).ready(function() {
+  $(function() {
     config.container.css("position", "fixed");
     config.container.css("z-index", 9999);
     config.container.css(config.position[0], "12px");
     config.container.css(config.position[1], "12px");
-    $("body").append(config.container);
+    config.container.appendTo(document.body);
   });
 
   function getNotificationElement() {
-    return $("<div>").css(config.notificationStyles).hover(function() {
+    return $("<div>").css(config.notificationStyles).bind('hover', function() {
       $(this).css(config.notificationStylesHover);
     }, function() {
       $(this).css(config.notificationStyles);
@@ -45,14 +45,13 @@
     timeOut = timeOut || config.defaultTimeOut;
 
     if (iconUrl) {
-      var iconElement = $("<img/>", {
-        src: iconUrl,
-        css: {
-          width: 36,
-          height: 36,
-          display: "inline-block",
-          verticalAlign: "middle"
-        }
+      var iconElement = $("<img/>");
+      iconElement.attr('src', iconUrl);
+      iconElement.css({
+        width: '36px',
+        height: '36px',
+        display: "inline-block",
+        verticalAlign: "middle"
       });
       notificationElement.append(iconElement);
     }
@@ -76,9 +75,12 @@
       textElement.append(messageElement);
     }
 
-    notificationElement.delay(timeOut).fadeOut(function(){
-      notificationElement.remove();
-    });
+    setTimeout(function() {
+      notificationElement.fadeOut(function(){
+        notificationElement.remove();
+      });
+    }, timeOut);
+
     notificationElement.bind("click", function() {
       notificationElement.hide();
     });
