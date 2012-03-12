@@ -76,7 +76,7 @@
     }
 
     setTimeout(function() {
-      notificationElement.fadeOut(function(){
+      notificationElement.animate({ opacity: 0 }, 400, function(){
         notificationElement.remove();
       });
     }, timeOut);
