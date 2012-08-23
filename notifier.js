@@ -12,7 +12,7 @@
       font: "normal 13px 'Droid Sans', sans-serif",
       borderRadius: "3px",
       boxShadow: "#999 0 0 12px",
-      width: "300px"
+      width: 330
     },
     notificationStylesHover: {
       opacity: 1,
@@ -51,7 +51,7 @@
           width: 36,
           height: 36,
           display: "inline-block",
-          verticalAlign: "middle"
+          verticalAlign: "top"
         }
       });
       notificationElement.append(iconElement);
@@ -59,8 +59,9 @@
 
     var textElement = $("<div/>").css({
       display: 'inline-block',
-      verticalAlign: 'middle',
-      padding: '0 12px'
+      verticalAlign: 'top',
+      padding: '0 0 0 12px',
+      width: config.notificationStyles.width - 50
     });
 
     if (title) {
