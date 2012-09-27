@@ -1,6 +1,8 @@
+This is the unstable development branch. The latest stable branch is [1.0.0](https://github.com/Srirangan/notifer.js/tree/1.0.0).
+
 Notifier.js
 =====
-Javascript library for Gnome / Growl type non-blocking notifications. Jquery required.
+Javascript library for Gnome / Growl type non-blocking notifications.
 
 Links
 =====
