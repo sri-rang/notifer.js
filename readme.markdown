@@ -1,29 +1,25 @@
-This is the unstable development branch. The latest stable branch is [1.0.0](https://github.com/Srirangan/notifer.js/tree/1.0.0).
+## Warning
+Master branch maybe *unstable*. The latest stable branch is [1.0.0](https://github.com/Srirangan/notifer.js/tree/1.0.0).
 
-Notifier.js
-=====
+## Notifier.js
 Javascript library for Gnome / Growl type non-blocking notifications.
 
-Links
-=====
+## Links
 * [Demo](http://opensource.srirangan.net/notifier.js/)
 * [Download](https://github.com/downloads/Srirangan/notifer.js/notifier.js.zip)
 
-Usage Guide
-=====
+## Usage Guide
 
 The master branch may be unstable from time to time. Use the downloadable archive for production.
 
 Hack away, experiment on the master branch. Feel free to clone, fork and send pull requests.
 
-Include Jquery and Notifier.js
------
+## Include Jquery and Notifier.js
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="notifier.js"></script>
 
-Trigger Notifications
------
+## Trigger Notifications
 
     // Success notifs
     Notifier.success('User registration successful')
@@ -47,8 +43,7 @@ Trigger Notifications
     // HTMLs are escaped, XSS attempts are blunted
     Notifier.error('<script>alert(\'xss attempt blunted\')</script>')
 
-Configure
------
+## Configure
 
   Default behavior of NotifierJS can be modified without having to muddle through the code.
 
