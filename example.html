@@ -1,7 +1,6 @@
 <html>
 <head>
   <title>Notifier.js Examples</title>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
   <style type="text/css">
     body {
       padding: 2% 5%;
@@ -16,7 +15,7 @@
     }
 
     .header {
-      padding:  12px 0;
+      padding: 12px 0;
       font: 48px "Droid Serif", serif;
       margin: 0 0 30px 0;
       border-bottom: 1px dotted #000;
@@ -37,8 +36,6 @@
       list-style: square;
     }
   </style>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-  <script type="text/javascript" src="notifier.js"></script>
 </head>
 <body>
 
@@ -55,7 +52,9 @@
     <li><a onclick="Notifier.warning('I warn you Ceasar!', 'Assassination Warning')">Warning with title</a></li>
     <li><a onclick="Notifier.error('Something may be wrong..')">Error</a></li>
     <li><a onclick="Notifier.error('Something may be wrong..', 'Ummm..')">Error with title</a></li>
-    <li><a onclick="Notifier.notify('Babe I\'m gonna leave you', 'Led Zeppelin', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/LedZeppelinmontage.jpg/36px-LedZeppelinmontage.jpg', 2000)">Custom</a></li>
+    <li>
+      <a onclick="Notifier.notify('Babe I\'m gonna leave you', 'Led Zeppelin', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/LedZeppelinmontage.jpg/36px-LedZeppelinmontage.jpg', 2000)">Custom</a>
+    </li>
     <li><a onclick="Notifier.error('<script>alert(\'xss attempt blunted\')</script>')">XSS attempts blunted</a></li>
   </ul>
 </div>
@@ -67,6 +66,8 @@
     <li><a href="https://github.com/Srirangan/notifer.js/">GitHub</a></li>
   </ul>
 </div>
+
+<script type="text/javascript" src="notifier.js"></script>
 
 </body>
 </html>
