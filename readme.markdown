@@ -5,7 +5,7 @@ Master branch maybe *unstable*. The latest stable branch is [1.0.0](https://gith
 Javascript library for Gnome / Growl type non-blocking notifications.
 
 ## Links
-* [Demo](http://www.srirangan.net/assets/demos/notifier.js/index.html)
+* [Demo](http://www.srirangan.net/demos/notifier.js/index.html)
 * [Download](https://github.com/downloads/Srirangan/notifer.js/notifier.js.zip)
 
 ## Usage Guide
