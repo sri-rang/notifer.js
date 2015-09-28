@@ -30,8 +30,8 @@ Hack away, experiment on the master branch. Feel free to clone, fork and send pu
     Notifier.info('Tomorrow is another day', 'Words of wisdom')
 
     // Warning notifs
-    Notifier.warning('I warn you Ceasar!')
-    Notifier.warning('I warn you Ceasar!', 'Assassination Warning')
+    Notifier.warning('I warn you Caesar!')
+    Notifier.warning('I warn you Caesar!', 'Assassination Warning')
 
     // Error notifs
     Notifier.error('Something may be wrong..')
